@@ -1,0 +1,190 @@
+// See https://aka.ms/new-console-template for more information
+
+//Test your Knowledge 1.What type would you choose for the following “numbers”? 
+// 1.
+//A person’s telephone number   Long( This is used when int is not large enough to store the value. Note that you should end the value with an "L":)
+//A person’s height  Double（The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits. Therefore it is safer to use double for most calculations.）
+//A person’s age   Int
+//A person’s gender (Male, Female, Prefer Not To Answer)   "String"
+//A person’s salary     Decimal/Double
+//A book’s ISBN   Long
+//A book’s price   Decimal/double
+//A book’s shipping weight  double
+//A country’s population  long
+//The number of stars in the universe   String "Countless"
+//The number of employees in each of the small or medium businesses in the United Kingdom (up to about 50,000 employees per business)   Long
+
+
+//2.
+//What are the difference between value type and reference type variables? What is boxing and unboxing? 
+//A: 1. value types will directly hold the value, while reference types will hold the memory address or reference for the value.
+//2. value types are stored in stack memory, while reference types will be stored in heap memory.
+//3. value type will not be collected by garbage collector, while reference type will be collected by.
+//4. value type can be created by Struct or Enum. while reference type can be created by class, interface, delegate, array
+//5. value type cannot accept null values, but reference types can accept null values
+
+//boxing: convert value type to reference type.
+//unboxing: convert reference type back to value type.
+
+
+//3. What is meant by the terms managed resource and unmanaged resource in .NET
+
+//Managed resources are those that are pure .NET code and managed by the runtime and are under its direct control.
+
+//Unmanaged resources are those that are not. File handles, pinned memory, COM objects, database connections etc.
+
+
+//Play with console
+
+//Using just theReadLine andWriteLine methods and your current knowledge of variables, you can have the user pass in quite a few bits of information.
+//Using this approach, create a console application that asks the user a few questions and then generates some custom output for them.
+//For instance, your program could generate their "hacker name" by asking them their favorite color, their astrology sign, and their street address number.
+//The result might be something like "Your hacker name is RedGemini480."
+
+//string Hackername = "Your hacker name is YellowLeo14570";
+//    Console.WriteLine(Hackername);
+
+
+
+
+//Controlling Flow and Converting Types 
+//1. What happens when you divide an int variable by 0?   System.DivideByZeroException: 'Attempted to divide by zero.'
+
+
+//int test = 5;
+//Console.WriteLine(test/0);
+
+//2.What happens when you divide a double variable by 0?  Infinity,cause system reading is really close to 0, but not exactly 0
+
+//double test = 5.73645d;
+//Console.WriteLine(test/0);
+
+//3.What happens when you overflow an int variable, that is, set it to a value beyond its range?  It would return unsignificant(useless) value.
+
+
+//Console.WriteLine(int.MaxValue+1);
+/*
+Console.WriteLine("please Input A Century");
+String Century = Console.ReadLine();
+int convert=Int32.Parse(Century);
+
+int years = convert * 100;
+int days = years * 365+24;
+double hours = days * 24;
+double minutes = hours * 60;
+double seconds = minutes * 60;
+double milliseconds = seconds * 1000;
+double microseconds=milliseconds * 1000;
+double nanoseconds=microseconds * 1000;
+
+Console.WriteLine("centuries"+ "="  + years + "years" + "=" +days+"days"+"="+hours+"hours"+"="+minutes+"minutes"+"="+seconds+"seconds"+"="+milliseconds+"millisconds"+"="+microseconds+"microseconds"+"="+nanoseconds+"nanoseconds");
+*/
+
+/*int max = 500; 
+for (byte i = 0; i < max; i++) 
+{ 
+    WriteLine(i); 
+}
+
+Syntax error, correct:Console.writeline(i);
+/*
+
+//1. When to use String vs. StringBuilder in C# ?  
+//If a string is going to remain constant throughout the program, then use String class object because a String object is immutable. If a string can change then using a StringBuilder is the best option.
+//2.What is the base class for all arrays in C#?
+//The Array class is the base class for all the arrays in C#. It is defined in the System namespace. The Array class provides various properties and methods to work with arrays.
+//3.How do you sort an array in C#?
+//sort an array in C# is using Array. Sort method.
+//4.What property of an array object can be used to get the total number of elements in an array?
+//.Length
+//5.Can you store multiple data types in System.Array?
+//Yes
+//6.What’s the difference between the System.Array.CopyTo() and System.Array.Clone()?
+//The Clone() method returns a new array (a shallow copy) object containing all the elements in the original array. The CopyTo() method copies the elements into another existing array. Both perform a shallow copy
+
+ */
+
+//string[] cars = {"Volvo", "BMW", "Ford", "Mazda","Volkswagen","Mercedes","Honda","Nissan","Toyota","Tesla"};
+//Console.WriteLine(cars[5]);
+
+/*
+string[] cars = { "Volvo", "BMW", "Ford", "Mazda", "Volkswagen", "Mercedes", "Honda", "Nissan", "Toyota", "Tesla" };
+for (int i = 0; i < cars.Length; i++) ;
+Console.WriteLine(cars.Length);
+*/
+/*
+
+string firstName = "John ";
+string lastName = "Doe";
+string name = firstName + lastName;
+Console.WriteLine(name);
+
+string firstName1 = "John ";
+string lastName1 = "Doe";
+string name1 = string.Concat(firstName1, lastName1);
+Console.WriteLine(name1);
+
+string firstName2 = "John";
+string lastName2 = "Doe";
+string name2 = $"My full name is :{firstName2} {lastName2}";
+Console.WriteLine(name2);
+
+//output: John Doe
+*/
+
+
+/*
+// Full name
+string name = "John Doe";
+
+// Location of the letter D
+int charPos = name.IndexOf("D");
+
+// Get last name
+string lastName = name.Substring(charPos);
+
+// Print the result
+Console.WriteLine(lastName);
+*/
+
+/*
+int x = 10;
+int y = 9;
+Console.WriteLine(x > y);
+*/
+
+/*
+int time = 20;
+if (time < 18)
+{
+    Console.WriteLine("Good day.");
+}
+else
+{
+    Console.WriteLine("Good evening.");
+}
+
+
+int time1 = 20;
+string result = (time1 < 18) ? "Good day." : "Good evening.";
+Console.WriteLine(result);
+*/
+
+//string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+//for (int i = 0; i < cars.Length; i++)
+//{
+//    Console.WriteLine(cars[i]);
+//}
+// print out every elements in the Array
+
+//string[] cars = { "Volvo", "BMW", "Ford", "Mazda" };
+//foreach (string i in cars)
+//{
+//    Console.WriteLine(i);
+//}
+
+/*
+int[] myNum = { 10154, 2, 4, 9, 17, 20, 29, 45, 7364, 198374 };
+Console.WriteLine(myNum.Length);
+*/
+
